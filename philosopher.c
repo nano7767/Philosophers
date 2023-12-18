@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   thread.c                                           :+:      :+:    :+:   */
+/*   Philosopher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svikornv <svikornv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/30 15:44:32 by svikornv          #+#    #+#             */
-/*   Updated: 2023/09/30 16:33:35 by svikornv         ###   ########.fr       */
+/*   Created: 2023/09/30 09:28:46 by svikornv          #+#    #+#             */
+/*   Updated: 2023/09/30 10:30:30 by svikornv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosopher.h"
 
-void	*routine(void *philo)
-{
-	while (philo->dead != 1)
-	{
-		eat(philo);
-		sleep(philo);
-		think(philo);
-	}
-}
 
-int	create_thread(t_philo *philo)
-{
-	int	i;
+// int	main(void)
+// {
+// 	int	mail;
+// 	int	i;
 
-	i = 0;
-	while (i < philo->no_philos)
-	{
-		pthread_create(&philo[i].thread, NULL, &routine, &philo[i]);
-		i++;
-	}
-	i = 0;
-	while (i < philo->no_philos)
-	{
-		pthread_join(&philo[i].thread, NULL, &routine, &philo[i]);
-		i++;
-	}
-	return (0);
-}
+// 	mail = 0;
+// 	i = 0;
+// 	while (i < 1000000)
+// 	{
+// 		mail++;
+// 		i++;
+// 	}
+// 	printf("mails = %d", mail);
+// 	return (0);
+// }

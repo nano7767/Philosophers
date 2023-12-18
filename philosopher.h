@@ -6,11 +6,12 @@
 /*   By: svikornv <svikornv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 10:30:04 by svikornv          #+#    #+#             */
-/*   Updated: 2023/09/30 15:55:43 by svikornv         ###   ########.fr       */
+/*   Updated: 2023/12/18 14:46:33 by svikornv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <pthread.h>
 
 typedef struct s_philo
@@ -20,11 +21,14 @@ typedef struct s_philo
 	int	time_to_die;
 	int	time_to_eat;
 	int	time_to_sleep;
-	int	NOTEPME;
+	int	meals_left;
 	int	id;
 	int	eating;
 	int	eaten;
 	int	dead;
+	// pthread_mutex_t	*r_fork;
+	// pthread_mutex_t	*l_fork;
+	pthread_mutex_t	*forks;
 }		t_philo;
 
 // typedef struct s_philo

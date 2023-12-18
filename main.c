@@ -6,7 +6,7 @@
 /*   By: svikornv <svikornv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 13:12:02 by svikornv          #+#    #+#             */
-/*   Updated: 2023/09/30 15:03:27 by svikornv         ###   ########.fr       */
+/*   Updated: 2023/12/18 14:42:51 by svikornv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 		return (write(2, "invalid argument count\n", 22), 1);
 	if (check_args(argv) == 1)
 		return (1);
-	init_philo(argv);
+	init_philos(argv);
 }
 
 int	check_number(char *s)
